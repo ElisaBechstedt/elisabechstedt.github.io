@@ -13,7 +13,7 @@ body{
   .contentbody{
     overflow: auto;
     background-color: rgba(20, 20, 20, 0.3);
-    border-radius: 15px;
+    border-radius: 35px;
     margin: 40px;
     width: 85%;
     min-height: 800px;
