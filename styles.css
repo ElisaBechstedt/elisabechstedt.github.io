@@ -4,6 +4,7 @@ body{
     background-position: center;
     background-size: cover;
     font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
     color: white;
     display: flex;
     align-items: center;
@@ -22,6 +23,11 @@ body{
   .profile-info{
     margin: 20px;
   }
+
+  .links{
+    font-size: 18px;
+    margin: 70px 0 0 40px;
+  }
   
   h1{
     font-weight: normal;
@@ -35,10 +41,11 @@ body{
   }
 
   a{
-      color: white;
+    text-decoration: none;
+    color: white;
   }
   
-  img{
+  .profile-picture{
     height: 150px;
     width: 150px;
     border-radius: 75px;
@@ -47,14 +54,20 @@ body{
     margin-left: 20px;
   }
 
+  .logos{
+    height: 30px;
+    width: 30px;
+    border-radius: 0px;
+  }
+  
+
   .description{
       margin-top: 80px;
       margin-left: 40px;
   }
 
   .contact-info{
-      margin-top: 430px;
-      margin-left: 40px;
+      margin: 430px 0 40px 40px;
   }
 
   
