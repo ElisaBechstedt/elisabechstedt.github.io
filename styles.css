@@ -1,7 +1,7 @@
 body{
     background-image: url(https://images.pexels.com/photos/4590853/pexels-photo-4590853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: stretch;
     background-size: cover;
     font-family: "M PLUS 1p";
     font-size: 18px;
@@ -14,7 +14,7 @@ body{
   
   .contentbody{
     overflow: auto;
-    background-color: rgba(20, 20, 20, 0.45);
+    background-color: rgba(20, 20, 20, 0.6);
     border-radius: 35px;
     margin: 40px;
     width: 85%;
