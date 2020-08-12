@@ -3,8 +3,9 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "M PLUS 1p";
     font-size: 18px;
+    font-weight: 100;
     color: white;
     display: flex;
     align-items: center;
@@ -13,32 +14,33 @@ body{
   
   .contentbody{
     overflow: auto;
-    background-color: rgba(20, 20, 20, 0.3);
+    background-color: rgba(20, 20, 20, 0.45);
     border-radius: 35px;
     margin: 40px;
     width: 85%;
     min-height: 800px;
   }
   
-  .profile-info{
-    margin: 20px;
-  }
+
 
   .links{
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    padding: 15px 0 15px 0;
     font-size: 18px;
-    margin: 70px 0 0 40px;
+    margin: 50px 40px 0 40px;
+  }
+
+  .links a{
+    margin: 0 20px 0 0;
   }
   
   h1{
-    font-weight: normal;
+    font-weight: 100;
     margin-bottom: 8px;
     margin-top: 40px;
   }
-  
-  h3{
-    margin-top: 5px;
-    font-weight: normal;
-  }
+
 
   a{
     text-decoration: none;
@@ -46,28 +48,40 @@ body{
   }
   
   .profile-picture{
-    height: 150px;
-    width: 150px;
-    border-radius: 75px;
-    float: left;
-    margin-right: 50px;
-    margin-left: 20px;
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
+    margin: 60px auto 30px auto;
+    display: block;
+    border: solid 2px rgb(36, 34, 34);
   }
 
-  .logos{
-    height: 30px;
-    width: 30px;
-    border-radius: 0px;
+  .profile-name{
+    text-align: center;
+    font-size: 40px;
   }
+
+  
   
 
-  .description{
-      margin-top: 80px;
-      margin-left: 40px;
+  .description{     
+      text-align: center;
+      margin: 50px 0 0 0;
   }
+
+
 
   .contact-info{
-      margin: 430px 0 40px 40px;
+      font-size: 20px;
+      margin: 80px 40px 40px 40px;
+      text-align: center;
   }
 
+
+  .logos{
+    height: 60px;
+    width: 60px;
+    border-radius: 0px;
+    margin: 10px 10px 0 0;
+  }
   
