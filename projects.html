@@ -1,27 +1,46 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Elisa Bechstedt</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="contentbody">
-            <div class="links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </div>
 
+<head>
+    <title>Elisa Bechstedt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
+</head>
 
-            <div class="projects">
-                <button>click me</button>
-            </div>
-
-
+<body>
+    <div class="contentbody">
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </div>
-       
 
-    </body>
+
+        <div class="projects">
+
+            <button onclick="showPopup()">click me</button>
+            <span class="popup" id="popup1">You successfully clicked the button!</span>
+            
+        </div>
+
+
+    </div>
+
+    <script>
+        
+        // When the user clicks on button the popup appears
+        function showPopup() {
+            var popup = document.getElementById("popup1");
+            if(popup.className == "popup") {
+                popup.className = "popup show";
+            } else {
+                popup.className = "popup";
+            }
+        }
+
+
+    </script>
+</body>
+
 </html>

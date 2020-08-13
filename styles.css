@@ -112,3 +112,13 @@ body{
   }
 
 
+/* /////////////////////////////////// */
+
+.popup {
+  visibility: hidden;
+  margin-left: 20px;
+}
+
+.show {
+  visibility: visible;
+}
