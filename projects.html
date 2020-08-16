@@ -5,6 +5,9 @@
     <title>Elisa Bechstedt</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -19,26 +22,117 @@
 
         <div class="projects">
 
-            <button onclick="showPopup()">click me</button>
-            <span class="popup" id="popup1">You successfully clicked the button!</span>
-            
+            <div>
+                <button onclick="showPopup()">click me</button>
+                <span class="popup" id="popup1">You successfully clicked the button!</span>
+            </div>
+
+            <div id="fontcolor-change" class="white-color">
+                <span>Click &#8250; </span>
+                <span class="pointer underline-hover" onclick="changeFontcolor()">here</span>
+                <span>&#8249; to change the fontcolor</span>
+            </div>
+
+            <div>
+                <div id="slider-container1" class="slider-container">
+                    <i onclick="slide()" class="far fa-arrow-alt-circle-right pointer green-hover"></i>
+                </div>
+            </div>
+
+            <div id="smiley-container">
+                <i id="smiley" class="far fa-laugh"></i>
+                <div id="smiley-slider-container">
+                    <div>
+                        <span>Size</span>
+                        <input oninput="sizeSmiley()"  id="smiley-slider-size" value="40" min="40" max="240" type="range">
+                    </div>
+                    <div>
+                        <span>Rotate</span>
+                        <input oninput="rotateSmiley()"  id="smiley-slider-rotation" value="0" min="0" max="360" type="range">
+                    </div>
+                    
+                    <div>
+                        <span>Red</span>
+                        <input oninput="colorSmiley()" id="smiley-slider-red" value="0" min="0" max="255" type="range">
+                    </div>
+                    <div>
+                        <span>Green</span>
+                        <input oninput="colorSmiley()" id="smiley-slider-green" value="0" min="0" max="255" type="range">
+                    </div>
+                    <div>
+                        <span>Blue</span>
+                        <input oninput="colorSmiley()" id="smiley-slider-blue" value="0" min="0" max="255" type="range">
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
 
     </div>
 
     <script>
-        
         // When the user clicks on button the popup appears
         function showPopup() {
             var popup = document.getElementById("popup1");
-            if(popup.className == "popup") {
+            if (popup.className == "popup") {
                 popup.className = "popup show";
             } else {
                 popup.className = "popup";
             }
         }
 
+
+        // When user clicks "here" the background changes
+
+        const colorClasses = ["white-color", "yellow-color", "green-color", "purple-color"];
+
+        function changeFontcolor() {
+            var fontcolor = document.getElementById("fontcolor-change")
+            const colorClassesCircle = [...colorClasses, colorClasses[0]];
+
+            for (let i = 0; i < colorClassesCircle.length; i++) {
+                if (fontcolor.classList.contains(colorClassesCircle[i])) {
+                    fontcolor.classList.replace(colorClassesCircle[i], colorClassesCircle[i + 1])
+                    return;
+                }
+            }
+        }
+
+        function slide() {
+            var container = document.getElementById("slider-container1");
+            var end = "end"
+            if (container.classList.contains(end)) {
+                container.classList.remove(end)
+            } else {
+                container.classList.add(end)
+            }
+
+        }
+
+        function sizeSmiley() {
+            var slider = document.getElementById("smiley-slider-size");
+            var smiley = document.getElementById("smiley");
+
+            smiley.style.fontSize = slider.value + "px";
+        }
+
+        function colorSmiley() {
+            var sliderRed = document.getElementById("smiley-slider-red");
+            var sliderGreen = document.getElementById("smiley-slider-green");
+            var sliderBlue = document.getElementById("smiley-slider-blue");
+            var smiley = document.getElementById("smiley");
+
+            smiley.style.color = "rgb(" + sliderRed.value + "," + sliderGreen.value + "," + sliderBlue.value + ")";
+        }
+
+        function rotateSmiley() {
+            var slider = document.getElementById("smiley-slider-rotation");
+            var smiley = document.getElementById("smiley");
+
+            smiley.style.transform = "rotate(" + slider.value + "deg)";
+        }
 
     </script>
 </body>
