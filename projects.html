@@ -44,20 +44,23 @@
                 <div id="smiley-slider-container">
                     <div>
                         <span>Size</span>
-                        <input oninput="sizeSmiley()"  id="smiley-slider-size" value="40" min="40" max="200" type="range">
+                        <input oninput="sizeSmiley()" id="smiley-slider-size" value="40" min="40" max="200"
+                            type="range">
                     </div>
                     <div>
                         <span>Rotate</span>
-                        <input oninput="rotateSmiley()"  id="smiley-slider-rotation" value="0" min="0" max="360" type="range">
+                        <input oninput="rotateSmiley()" id="smiley-slider-rotation" value="0" min="0" max="360"
+                            type="range">
                     </div>
-                    
+
                     <div>
                         <span>Red</span>
                         <input oninput="colorSmiley()" id="smiley-slider-red" value="0" min="0" max="255" type="range">
                     </div>
                     <div>
                         <span>Green</span>
-                        <input oninput="colorSmiley()" id="smiley-slider-green" value="0" min="0" max="255" type="range">
+                        <input oninput="colorSmiley()" id="smiley-slider-green" value="0" min="0" max="255"
+                            type="range">
                     </div>
                     <div>
                         <span>Blue</span>
@@ -67,13 +70,21 @@
             </div>
 
 
+            <div id="button-container">
+                <button onclick="createButton()">:)</button>
+            </div>
+
+
+
+
+
+
         </div>
-
-
     </div>
 
     <script>
-        // When the user clicks on button the popup appears
+
+        // When the user clicks on button the text appears
         function showPopup() {
             var popup = document.getElementById("popup1");
             if (popup.className == "popup") {
@@ -100,6 +111,8 @@
             }
         }
 
+        // When user clicks the arrow, it changes the side
+
         function slide() {
             var container = document.getElementById("slider-container1");
             var end = "end"
@@ -108,8 +121,9 @@
             } else {
                 container.classList.add(end)
             }
-
         }
+
+        // The user can style the Smiley
 
         function sizeSmiley() {
             var slider = document.getElementById("smiley-slider-size");
@@ -133,6 +147,14 @@
 
             smiley.style.transform = "rotate(" + slider.value + "deg)";
         }
+
+        function createButton() {
+            var newButton = document.createElement("button");
+            newButton.innerHTML = ":)";
+            var buttonContainer = document.getElementById("button-container");
+            buttonContainer.appendChild(newButton);
+        }
+
 
     </script>
 </body>
