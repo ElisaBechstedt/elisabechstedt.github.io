@@ -4,6 +4,7 @@
 <head>
     <title>Elisa Bechstedt</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ProjectStyles.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -84,7 +85,8 @@
 
     <script>
 
-        // When the user clicks on button the text appears
+        // When the user clicks on button, the text appears
+
         function showPopup() {
             var popup = document.getElementById("popup1");
             if (popup.className == "popup") {
@@ -95,7 +97,7 @@
         }
 
 
-        // When user clicks "here" the background changes
+        // When user clicks "here", the background changes
 
         const colorClasses = ["white-color", "yellow-color", "green-color", "purple-color"];
 
@@ -147,6 +149,8 @@
 
             smiley.style.transform = "rotate(" + slider.value + "deg)";
         }
+
+        // when user clicks the button, new buttons appear
 
         function createButton() {
             var newButton = document.createElement("button");

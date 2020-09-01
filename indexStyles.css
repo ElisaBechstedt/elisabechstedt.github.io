@@ -1,0 +1,17 @@
+.profile-picture {
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
+    margin: 60px auto 30px auto;
+    display: block;
+    border: solid 3px rgba(214, 208, 208, 0.664);
+}
+
+.profile-name {
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    margin: 50px 0 0 0;
+}

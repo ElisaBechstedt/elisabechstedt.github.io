@@ -1,37 +1,58 @@
 <!doctype html>
 <html>
 
- <head>
+<head>
   <title>Elisa Bechstedt</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="indexStyles.css">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-        crossorigin="anonymous" />
- </head>
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+</head>
 
- <body>
-   <div class="contentbody">
-     <div class="links">
-       <a href="index.html">Home</a>
-       <a href="about.html">About</a>
-       <a href="projects.html">Projects</a>
-       <a href="contact.html">Contact</a>
-     </div>
-
-     <div>
-       <img class="profile-picture" src="images/me.jpg">
-       <h1 class="profile-name">Elisa Bechstedt</h1>
+<body>
+  <div class="contentbody">
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </div>
-     
 
-     <div class="description">
-         <p>Hi my name is Elisa and this is my first Website!</p>
-     </div>
+    <div>
+      <img class="profile-picture" src="images/me.jpg">
+      <h1 class="profile-name">Elisa Bechstedt</h1>
+    </div>
 
-     
-   </div>
-  <script src="script.js"></script>
- </body>
+
+
+    <div class="description">
+      <p id="greeting"></p>
+      <p>Hi my name is Elisa and this is my first Website!</p>
+    </div>
+
+
+  </div>
+
+  <script>
+
+    var today = new Date()
+    var currentTime = today.getHours()
+    console.log(currentTime);
+    if (currentTime >= 0 && currentTime < 6) {
+      document.getElementById("greeting").innerHTML = 'Good Night!';
+    } else if (currentTime >= 6 && currentTime < 12) {
+      document.getElementById("greeting").innerHTML = 'Good Morning!';
+    } else if (currentTime >= 12 && currentTime < 18) {
+      document.getElementById("greeting").innerHTML = 'Good Afternoon!';
+    } else if (currentTime >= 18 && currentTime < 24) {
+      document.getElementById("greeting").innerHTML = 'Good Evening!';
+    }
+
+
+  </script>
+
+</body>
 
 </html>
