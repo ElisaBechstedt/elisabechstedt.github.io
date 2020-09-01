@@ -16,13 +16,6 @@
     margin-right: 20px;
 }
 
-.projects button:hover {
-    background-color: rgba(20, 20, 20, 0.7);
-    color: rgb(7, 211, 7);
-    border: solid 2px rgb(7, 211, 7);
-}
-
-
 .projects > * {
     border: solid 1px white;
     padding: 20px;
@@ -31,7 +24,11 @@
     user-select: none;
 }
 
-
+.projects button:hover {
+    background-color: rgba(20, 20, 20, 0.7);
+    color: rgb(7, 211, 7);
+    border: solid 2px rgb(7, 211, 7);
+}
 
 
 .popup {
@@ -132,3 +129,11 @@
 #button-container button {
     margin: 5px 5px 5px 5px;
 }
+
+.calculator button {
+    width: 70px;
+    height: 70px;
+    margin: 10px 10px 10px 10px;
+}
+
+

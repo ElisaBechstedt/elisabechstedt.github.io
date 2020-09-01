@@ -3,8 +3,8 @@
 
 <head>
     <title>Elisa Bechstedt</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="ProjectStyles.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="projects.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -15,7 +15,6 @@
     <div class="contentbody">
         <div class="links">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -23,10 +22,12 @@
 
         <div class="projects">
 
+
             <div>
                 <button onclick="showPopup()">click me</button>
                 <span class="popup" id="popup1">You successfully clicked the button!</span>
             </div>
+
 
             <div id="fontcolor-change" class="white-color">
                 <span>Click &#8250; </span>
@@ -75,6 +76,41 @@
                 <button onclick="createButton()">:)</button>
             </div>
 
+
+            <div id="calculator" class="calculator">
+
+                <button onclick="Calculator.clear()">C</button>
+                <span id="calc-display">0</span>
+
+                <br>
+
+                <button onclick="Calculator.insertValue(7)">7</button>
+                <button onclick="Calculator.insertValue(8)">8</button>
+                <button onclick="Calculator.insertValue(9)">9</button>
+                <button onclick="Calculator.insertValue('+')">+</button>
+
+                <br>
+
+                <button onclick="Calculator.insertValue(4)">4</button>
+                <button onclick="Calculator.insertValue(5)">5</button>
+                <button onclick="Calculator.insertValue(6)">6</button>
+                <button onclick="Calculator.insertValue('-')">-</button>
+
+                <br>
+
+                <button onclick="Calculator.insertValue(1)">1</button>
+                <button onclick="Calculator.insertValue(2)">2</button>
+                <button onclick="Calculator.insertValue(3)">3</button>
+                <button onclick="Calculator.insertValue('*')">*</button>
+
+                <br>
+
+                <button onclick="Calculator.insertValue(0)">0</button>
+                <button onclick="Calculator.insertValue('.')">.</button>
+                <button onclick="Calculator.calculate()">=</button>
+                <button onclick="Calculator.insertValue('/')">/</button>
+
+            </div>
 
 
 
@@ -159,6 +195,28 @@
             buttonContainer.appendChild(newButton);
         }
 
+
+        // calculator
+
+        class Calculator {
+            static clear() {
+                var display = document.getElementById("calc-display");
+                display.innerHTML = "0";
+            }
+
+            static insertValue(val) {
+                var display = document.getElementById("calc-display");
+                if (display.innerHTML == 0) {
+                    display.innerHTML = "";
+                }
+                display.innerHTML = display.innerHTML + val;
+            }
+
+            static calculate() {
+                var display = document.getElementById("calc-display");
+                display.innerHTML = eval(display.innerHTML);
+            }
+        }
 
     </script>
 </body>
