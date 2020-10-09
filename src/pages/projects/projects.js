@@ -96,3 +96,13 @@ class Calculator {
         display.innerHTML = eval(display.innerHTML);
     }
 }
+
+// Square Rotate
+
+function rotateSquare(){
+    var square = document.getElementById("square");
+    
+
+    square.style.transform = "rotate(20deg)";
+    
+}
